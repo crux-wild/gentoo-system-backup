@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+# vim: filetype=sh
+
+dir_list=("slash" "usr")
+
+date=$(date +%F)
+
+distro=$(uname -r)
+
+vg_name="vg0"
+
+snap_size="3G"
+
+create_new_snapshot() {
+
+  snap_name="snap-${dir_name}"
+
+  lv_name="lv${dir_name}"
+
+  lv_path="/dev/mapper/${vg_name}-${lv_name}"
+
+  lvcreate --size "${snap_size}" --snapshot --name "${snap_name}" "${lv_path}"
+
+}
+
+mount_snapshot() {
+
+  mount_dir="/mnt/${dir_name}"
+
+  # Create a unique mount directory.
+  if [[ ! -e "${mount_dir}" ]]; then
+
+    mkdir -p "${mount_dir}"
+
+  fi
+
+  mount -o ro "${snap_path}" "${mount_dir}"
+
+  # Create a unique backup directory.
+  if [[ ! -e "${dest_dir}" ]]; then
+
+    mkdir -p ${dest_dir}
+
+  fi
+
+}
+
+tar_snapshot() {
+
+  dest_dir="/opt/backup/bootable/snapshot/${dir_name}"
+
+  tar_dir="${dest_dir}/${distro}-${dir_name}-${date}.tar.xz"
+
+  tar -Jpvcf "${tar_dir}" "${mount_dir}"
+
+}
+
+tar_old_snapshot() {
+
+  snap_output_name="snap--${dir_name}"
+
+  snap_path="/dev/mapper/${vg_name}-${snap_output_name}"
+
+  # Current directory have a snapshot exists.
+  if [[ -e "${snap_path}" ]]; then
+
+    mount_snapshot
+
+    tar_snapshot
+
+    umount "${snap_path}"
+
+    lvremove "${snap_path}"
+
+  fi
+
+}
+
+main() {
+  for dir_name in "${dir_list[@]}"; do
+
+    tar_old_snapshot
+
+    create_new_snapshot
+
+  done
+}
+
+main
