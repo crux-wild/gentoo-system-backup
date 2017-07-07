@@ -121,9 +121,19 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 -   `/dev`包含`I/O`设备(`/dev/sda0`)或者是虚拟设备(`/dev/null`)的设备文件。通常是
     设备驱动程序在文件系统的一个表征，用户程序可以通过`VFS`标准的系统读写设备。
-    驱动程序是存在于内存中的动态数据，不需要备份。
+    加载之后的驱动程序是存在于内存中的动态数据，不需要备份。
 
--   `/proc`
+-   `/proc`查看进程信息的特殊文件系统，保存的是内核中动态的数据。
+
+-   `/tmp`是用来保存临时的目录，里面的数据每次重启之后都会被清空。
+
+-   `/run`一个临时文件系统用来存储运行产生的动态数据。
+
+-   `/mnt`一个空目录，是做临时挂载点。
+
+-   `/media`便携设备(例：`usb`)的默认挂载点。
+
+-   `/lost+found`
 
 [查看备份排除文件](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-exclude)
 
