@@ -121,7 +121,7 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 -   `/dev`包含`I/O`设备(`/dev/sda0`)或者是虚拟设备(`/dev/null`)的设备文件。通常是
     设备驱动程序在文件系统的一个表征，用户程序可以通过`VFS`标准的系统读写设备。
-    是存在于内存中的动态文件，不需要备份。
+    驱动程序是存在于内存中的动态数据，不需要备份。
 
 -   `/proc`
 
