@@ -133,7 +133,7 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 -   `/media`便携设备(例：`usb`)的默认挂载点。
 
--   `/lost+found`
+-   `/lost+found`用来存储`fsck`命令发现没有引用的数据片段。
 
 [查看备份排除文件](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-exclude)
 
