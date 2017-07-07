@@ -119,11 +119,11 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 ### 排除文件
 
--   `/dev`包含需要设备(`/dev/sda0`)或者是虚拟设备(`/dev/null`)的设备文件。通常是
+-   `/dev`包含`I/O`设备(`/dev/sda0`)或者是虚拟设备(`/dev/null`)的设备文件。通常是
     设备驱动程序在文件系统的一个表征，用户程序可以通过`VFS`标准的系统读写设备。
     是存在于内存中的动态文件，不需要备份。
 
--   
+-   `/proc`
 
 [查看备份排除文件](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-exclude)
 
