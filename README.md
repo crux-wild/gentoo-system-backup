@@ -115,6 +115,9 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 > 文件遵循`POSIX`规范。而文件中字符和二进制数据也是遵循相应的编码规范(例:`utf-8
 > `)。基于文件的备份可以有更好移植性。
 
+[全量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-backup)
+
+### 还原思路
 
 ```
 tar --xattrs -xpf $backupfile
