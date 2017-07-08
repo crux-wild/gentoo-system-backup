@@ -151,6 +151,14 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 tar --xattrs -xpf $backupfile
 ```
 
+### 同步到其他的块设备
+
+根据上述分析可以看出，通常还原全量备份的时候，都是发生块设备发生较大损坏的时候。
+如果使用块设备其中的分区作为存储目录，如果块设备损坏较为严重，数据所处的分区本身
+也会很难使用。这个使用必要使用其他的块设备(例：`usb-flasher`)做多点备份。
+
+[查看同步其他的块设备](https://raw.githubusercontent.com/crux-wild/system-backup/master/rsync-full-system-backup)
+
 ## 差量备份
 
 ## 相关链接
