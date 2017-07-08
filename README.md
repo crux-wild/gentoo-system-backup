@@ -84,6 +84,9 @@ tar --xattrs -xpf $backupfile
 
 #### 实施备份
 
+差量备份相对全量备份开销较小，可以多次少量进行备份，以达到其能够灵活选择还原的时
+节点。为了能够自动化完成定期备份，我们可以使用crontab进行备份。
+
 - [实施备份步骤wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%AE%9E%E6%96%BD%E5%A4%87%E4%BB%BD-1)
 
 - [查看差量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup)
