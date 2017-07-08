@@ -206,6 +206,21 @@ sudo crontab -e
 
 [查看每周备份任务表](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup-crontab)
 
+### 同步到其他块设备
+
+差量备份虽然是块设备数据损坏不大的时候使用。但是，通过全量备份时间节点比较靠前的
+问题，可以通过多个差量文件尽可能的进行弥补。可以复用全量备份同步脚本，只是对目录
+结构进行修改，其中`full-system`和`difference`分别存放全量和差量备份文件。使用
+`rsync`进行增量传输。
+
+```
+- backup
+
+    - full-system
+
+    - difference
+```
+
 ## 相关链接
 
 <https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/About><br/>
