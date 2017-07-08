@@ -43,6 +43,9 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 #### 排除文件
 
+文件系统中一些目录是内存映像，而一些是系统的运行时产生的缓存文件。这些目录都是不
+应纳入到备份快照中来的。这些目录tar命令可以通过--exclude-from指定排除文件。
+
 - [排除文件介绍wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E6%8E%92%E9%99%A4%E6%96%87%E4%BB%B6)
 
 - [查看备份排除文件](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-exclude)
