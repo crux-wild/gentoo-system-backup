@@ -204,9 +204,9 @@ tar --xattrs -xpf $backupfile
 sudo crontab -e
 ```
 
-### 还原思路
-
 [查看每周备份任务表](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup-crontab)
+
+### 还原思路
 
 ### 同步到其他块设备
 
