@@ -26,7 +26,15 @@
 
 #### 备份环境
 
-- [备份环境(chroot)介绍和步骤wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%A4%87%E4%BB%BD%E7%8E%AF%E5%A2%83)
+```
+mount /dev/<your-partition-or-driver>
+
+cd /mnt
+
+chroot . /bin/bash
+```
+
+- [备份环境(chroot)介绍wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%A4%87%E4%BB%BD%E7%8E%AF%E5%A2%83)
 
 #### 实施备份
 
