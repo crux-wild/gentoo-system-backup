@@ -109,6 +109,21 @@
 
 #### 备份环境
 
+`/proc`和`/sys`及其`/dev`会在系统启动的时候开始填充数据，但这些数据并不需要备份
+，可以通过`chroot`来避免。
+
+```
+mount /dev/<your-partition-or-driver>
+
+cd /mnt
+
+chroot . /bin/bash
+```
+
+> 通过`livecd`启动之后，CD中文件系统作为根目录被挂载。相对CD文件系统的`/proc`和`
+> /sys`及其`/dev`三个目录，在`livecd`启动之后被内核填充。其后挂载系统分区到`/mnt
+> `之后，`/mnt/proc`和`/mnt/sys`及其`/mnt/dev`其中的内容没有被填充。
+
 #### 实施备份
 
 ```
@@ -183,4 +198,3 @@ tar --xattrs -xpf $backupfile
 <https://en.wikipedia.org/wiki/Unix_filesystem><br/>
 <https://wiki.archlinux.org/index.php/Full_system_backup_with_tar><br/>
 <https://www.howtoforge.com/linux_lvm_snapshots><br/>
-
