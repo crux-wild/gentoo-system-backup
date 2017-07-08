@@ -52,7 +52,11 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 ### 还原思路
 
-- [还原操作及其分析wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E8%BF%98%E5%8E%9F%E6%80%9D%E8%B7%AF)
+```
+tar --xattrs -xpf $backupfile
+```
+
+- [全量还原应用场景wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E8%BF%98%E5%8E%9F%E6%80%9D%E8%B7%AF)
 
 ### 同步到其他的块设备
 
