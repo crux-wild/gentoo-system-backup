@@ -243,3 +243,4 @@ sudo crontab -e
 <https://en.wikipedia.org/wiki/Unix_filesystem><br/>
 <https://wiki.archlinux.org/index.php/Full_system_backup_with_tar><br/>
 <https://www.howtoforge.com/linux_lvm_snapshots><br/>
+<https://wiki.gentoo.org/wiki/LVM><br/>
