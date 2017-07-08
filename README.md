@@ -78,6 +78,8 @@ tar --xattrs -xpf $backupfile
 
 #### 技术细节
 
+差量备份使用的是通用块层的lvm来实现。
+
 - [lvm快照原理分析wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82)
 
 #### 实施备份
