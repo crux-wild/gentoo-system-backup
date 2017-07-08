@@ -102,7 +102,26 @@ tar --xattrs -xpf $backupfile
 
 ### 同步到其他块设备
 
-- [同步到其他设备思路wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%90%8C%E6%AD%A5%E5%88%B0%E5%85%B6%E4%BB%96%E5%9D%97%E8%AE%BE%E5%A4%87)
+差量备份虽然是块设备数据损坏不大的时候使用。但是，通过全量备份时间节点比较靠前的
+问题，可以通过多个差量文件尽可能的进行弥补。可以复用全量备份同步脚本，只是对目录
+结构进行修改，其中`full-system`和`difference`分别存放全量和差量备份文件。使用
+`rsync`进行增量传输。
+
+```
+|__ backup/
+      |
+      |__ full-system/
+          |
+          |__ full-system<date>.tar.xz
+          |
+          |__ ...
+      |
+      |__ difference/
+          |
+          |__ difference<date>.tar.xz
+          |
+          |__ ...
+```
 
 ## 相关链接
 
