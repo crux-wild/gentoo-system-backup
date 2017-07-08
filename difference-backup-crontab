@@ -1,0 +1,2 @@
+# Exec a serial of weekly jobs every Sat.
+19 4  *  *  6  /bin/run-parts /etc/cron.weekly/

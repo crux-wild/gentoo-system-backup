@@ -195,6 +195,19 @@ tar --xattrs -xpf $backupfile
 
 [查看差量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup)
 
+差量备份相对全量备份开销较小，可以多次少量进行备份，以达到其能够灵活选择还原的时
+节点。为了能够自动化完成定期备份，我们可以使用`crontb`进行备份。
+
+```
+sudo crontab -e
+```
+
+[查看每周备份任务表]()
+
+```
+sudo crontab -e
+```
+
 ## 相关链接
 
 <https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/About><br/>
