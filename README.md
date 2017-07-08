@@ -60,7 +60,9 @@ tar --xattrs -xpf $backupfile
 
 ### 同步到其他的块设备
 
-- [同步操作分析wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%90%8C%E6%AD%A5%E5%88%B0%E5%85%B6%E4%BB%96%E7%9A%84%E5%9D%97%E8%AE%BE%E5%A4%87)
+进行还原全量备份的时候，都是块设备发生较大损坏的时候。如果使用块设备其中的分区作
+为存储目录，如果块设备损坏较为严重，数据所处的分区本身也很难确保其完整。这个使用
+必要使用其他的块设备(例：`便携设备`)做多点备份。
 
 - [查看同步其他的块设备脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/rsync-full-system-backup)
 
