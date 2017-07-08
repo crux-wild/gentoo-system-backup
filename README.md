@@ -214,11 +214,19 @@ sudo crontab -e
 `rsync`进行增量传输。
 
 ```
-- backup
+|__ backup
 
-    - full-system
+      |__ full-system
 
-    - difference
+          |__ full-system<date>.tar.xz
+
+          |__ ...
+
+      |__ difference
+
+          |__ difference<date>.tar.xz
+
+          |__ ...
 ```
 
 ## 相关链接
