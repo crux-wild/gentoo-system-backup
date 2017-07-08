@@ -17,8 +17,7 @@
 
 #### 备份时间
 
-全量备份时间最好为系统功能确定，初次安装并配置完成系统之后。此时通过`tar`命令打
-包压缩当前系统全量快照。
+[备份时间介绍↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%A4%87%E4%BB%BD%E6%97%B6%E9%97%B4)
 
 #### 备份环境
 
@@ -46,9 +45,10 @@
 使用块设备其中的分区作为存储目录，如果块设备损坏较为严重，数据所处的分区本身也很
 难确保其完整。这个使用必要使用其他的块设备(例：`便携设备`)做多点备份。
 
+> `rsync`相对于`cp`能够在复制的过程中保证文件属性(例:`owner`)不丢失。
+
 [查看同步其他的块设备](https://raw.githubusercontent.com/crux-wild/system-backup/master/rsync-full-system-backup)
 
-> `rsync`相对于`cp`能够在复制的过程中保证文件属性(例:`owner`)不丢失。
 
 ## 差量备份
 
