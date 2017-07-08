@@ -190,6 +190,9 @@ tar --xattrs -xpf $backupfile
 全量备份完成之后，在系统投入正式使用或者存放用户数据的时候，可以开始考虑进行差量
 备份。
 
+> 既然是差量备份，此时的数据应该相对稳定，没有大量的数据增加和减少，安装系统期间
+> 有大量的数据写入这个时候不是很适合。
+
 [查看差量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup)
 
 ## 相关链接
