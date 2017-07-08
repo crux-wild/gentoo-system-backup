@@ -33,7 +33,9 @@
 
 #### 实施备份
 
-> tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
+```
+tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
+```
 
 - [全量备份操作分析wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%AE%9E%E6%96%BD%E5%A4%87%E4%BB%BD)
 
