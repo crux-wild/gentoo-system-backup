@@ -159,7 +159,7 @@ tar --xattrs -xpf $backupfile
 
 [查看同步其他的块设备](https://raw.githubusercontent.com/crux-wild/system-backup/master/rsync-full-system-backup)
 
-> `rsync`相对于`cp`能够的复制的过程中文件属性(例:`owner`)不丢失。
+> `rsync`相对于`cp`能够在复制的过程中保证文件属性(例:`owner`)不丢失。
 
 ## 差量备份
 
