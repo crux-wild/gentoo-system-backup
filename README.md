@@ -39,25 +39,7 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 #### 排除文件
 
-文件系统中一些目录是内存映像，而一些是系统的运行时产生的缓存文件。这些目录都是不
-应纳入到备份快照中来的。这些目录`tar`命令可以通过`--exclude-from`指定排除文件。
-具体内容如下:
-
--   `/dev`包含`I/O`设备(`/dev/sda0`)或者是虚拟设备(`/dev/null`)的设备文件。通常
-    是设备驱动程序在文件系统的一个表征，用户程序可以通过`VFS`标准的系统读写设备
-    。加载之后的驱动程序是存在于内存中的动态数据，不需要备份。
-
--   `/proc`查看进程信息的特殊文件系统，保存的是内核中动态的数据。
-
--   `/tmp`是用来保存临时的目录，里面的数据每次重启之后都会被清空。
-
--   `/run`一个临时文件系统用来存储运行产生的动态数据。
-
--   `/mnt`一个空目录，是做临时挂载点。
-
--   `/media`便携设备(例：`usb`)的默认挂载点。
-
--   `/lost+found`用来存储`fsck`命令发现没有引用的数据片段。
+[排除文件介绍wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E6%8E%92%E9%99%A4%E6%96%87%E4%BB%B6)
 
 [查看备份排除文件](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-exclude)
 
