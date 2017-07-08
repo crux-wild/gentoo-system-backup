@@ -181,6 +181,6 @@ tar --xattrs -xpf $backupfile
 ## 相关链接
 
 <https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/About><br/>
-<https://en.wikipedia.org/wiki/Unix_filesystem>
-<https://wiki.archlinux.org/index.php/Full_system_backup_with_tar>
+<https://en.wikipedia.org/wiki/Unix_filesystem><br/>
+<https://wiki.archlinux.org/index.php/Full_system_backup_with_tar><br/>
 
