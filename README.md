@@ -43,7 +43,7 @@
 
 [同步操作分析wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%90%8C%E6%AD%A5%E5%88%B0%E5%85%B6%E4%BB%96%E7%9A%84%E5%9D%97%E8%AE%BE%E5%A4%87)
 
-[查看同步其他的块设备](https://raw.githubusercontent.com/crux-wild/system-backup/master/rsync-full-system-backup)
+[查看同步其他的块设备脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/rsync-full-system-backup)
 
 ## 差量备份
 
