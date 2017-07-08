@@ -171,8 +171,8 @@ tar --xattrs -xpf $backupfile
 
 ## 差量备份
 
-全量备份完成之后，在系统投入正式使用和开始存放其他用户的时候，可以开始考虑进行差
-量备份。
+全量备份完成之后，在系统投入正式使用或者存放其他用户的时候，可以开始考虑进行差量
+备份。
 
 [查看差量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup)
 
