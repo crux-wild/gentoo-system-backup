@@ -108,9 +108,9 @@
 全量备份时间最好为系统功能确定，初次安装并配置完成系统之后。此时通过`tar`命令打
 包压缩当前系统全量快照。
 
-### 备份环境
+#### 备份环境
 
-### 实施备份
+#### 实施备份
 
 ```
 tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
@@ -125,7 +125,7 @@ tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
 
 [查看全量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-backup)
 
-### 排除文件
+#### 排除文件
 
 文件系统中一些目录是内存映像，而一些是系统的运行时产生的缓存文件。这些目录都是不
 应纳入到备份快照中来的。这些目录`tar`命令可以通过`--exclude-from`指定排除文件。
