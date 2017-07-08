@@ -173,5 +173,7 @@ tar --xattrs -xpf $backupfile
 
 ## 差量备份
 
+[查看差量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup)
+
 ## 相关链接
 
