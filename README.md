@@ -173,10 +173,12 @@ tar --xattrs -xpf $backupfile
 
 ### 备份思路
 
-全量备份完成之后，在系统投入正式使用或者存放其他用户的时候，可以开始考虑进行差量
+全量备份完成之后，在系统投入正式使用或者存放用户数据的时候，可以开始考虑进行差量
 备份。
 
 [查看差量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup)
 
 ## 相关链接
+
+<https://wiki.archlinux.org/index.php/Full_system_backup_with_tar>
 
