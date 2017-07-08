@@ -95,6 +95,9 @@ tar --xattrs -xpf $backupfile
 
 ### 还原思路
 
+当系统损害，但是`lvconvert`仍然可以使用的情况下，应该优先考虑是差量还原。其实就是
+特殊时间节点中快照的旧数据，回滚到当前目录。
+
 - [还原思路wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E8%BF%98%E5%8E%9F%E6%80%9D%E8%B7%AF-1)
 
 ### 同步到其他块设备
