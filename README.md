@@ -16,22 +16,7 @@
 全量备份时间最好为系统功能确定，初次安装并配置完成系统之后。此时通过`tar`命令打
 包压缩当前系统全量快照。
 
-#### 备份环境
-
-`/proc`和`/sys`及其`/dev`会在系统启动的时候开始填充数据，但这些数据并不需要备份
-，可以通过`chroot`来避免。
-
-```
-mount /dev/<your-partition-or-driver>
-
-cd /mnt
-
-chroot . /bin/bash
-```
-
-> 通过`livecd`启动之后，CD中文件系统作为根目录被挂载。相对CD文件系统的`/proc`和`
-> /sys`及其`/dev`三个目录，在`livecd`启动之后被内核填充。其后挂载系统分区到`/mnt
-> `之后，`/mnt/proc`和`/mnt/sys`及其`/mnt/dev`其中的内容没有被填充。
+[备份环境(chroot)介绍和步骤wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%A4%87%E4%BB%BD%E7%8E%AF%E5%A2%83)
 
 #### 实施备份
 
