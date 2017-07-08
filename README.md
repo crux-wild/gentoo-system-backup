@@ -22,7 +22,7 @@
 
 #### 备份时间
 
-- [备份时间介绍wiki↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%A4%87%E4%BB%BD%E6%97%B6%E9%97%B4)
+全量备份时间最好为系统功能确定，初次安装并配置完成系统之后。此时通过tar命令打 包压缩当前系统全量快照。
 
 #### 备份环境
 
