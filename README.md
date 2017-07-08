@@ -202,7 +202,7 @@ tar --xattrs -xpf $backupfile
 sudo crontab -e
 ```
 
-[查看每周备份任务表]()
+[查看每周备份任务表](https://raw.githubusercontent.com/crux-wild/system-backup/master/difference-backup-crontab)
 
 ```
 sudo crontab -e
