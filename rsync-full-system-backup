@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# vim: filetype=sh
+
+mount /dev/mapper/vg--usb--16G-lvbackup /mnt
+
+rsync -a /opt/backup /mnt
+
+umount /dev/mapper/vg--usb--16G-lvbackup
