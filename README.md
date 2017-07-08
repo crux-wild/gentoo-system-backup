@@ -26,17 +26,6 @@
 
 [全量备份操作及其分析↵](https://github.com/crux-wild/system-backup/wiki/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD#%E5%AE%9E%E6%96%BD%E5%A4%87%E4%BB%BD)
 
-```
-tar --exclude-from=$exclude_file --xattrs -czpvf $backupfile /
-```
-
-> 安装操作系统实质是通过计算把数据写入到块设备完成持久化。而`unix`系统过`VFS`规
-> 范把不同的块设备抽象为文件，通过格式化和挂在成为目录使用。通过相同的系统调用(
-> 例:`read`)进行操作。`tar`的备份就是基于文件级别的备份。`unix`系统中的七种类型:
-> `d`(目录文件)，`l`(符号链接)，`s`(套接字)，`b`(设备文件)，`p`(管道文件)，普通
-> 文件遵循`POSIX`规范。而文件中字符和二进制数据也是遵循相应的编码规范(例:`utf-8`
-> )。基于文件的备份可以有更好的移植性。
-
 [查看全量备份脚本](https://raw.githubusercontent.com/crux-wild/system-backup/master/full-system-backup)
 
 #### 排除文件
